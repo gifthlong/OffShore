@@ -5,45 +5,66 @@
 }
 
 <h2>Index</h2>
+<div class="container">
+    <div class="row">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            <form action="" class="form-horizontal row-border">
+                <div class="form-group">
+                    <label for="" class="control-label col-sm-2">Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" id="txtName" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ddlOffshore" class="control-label col-sm-2">Account</label>
+                    <div class="col-sm-8">
+                        <input id="ddlOffshore" value="34234">
+                        @Html.DropDownListFor(m => m.funds, Model.funds)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtAmount" class="control-label col-sm-2">Amount (ZAR)</label>
+                    <div class="col-sm-8">
+                        <input type="text" id="txtAmount" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtConvertedAmount" class="control-label col-sm-2">Amount </label>
+                    <div class="col-sm-8">
+                        <input type="text" id="txtConvertedAmount" disabled="disabled" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">
+                        <input id="dateTransaction" type="submit" value="Save" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group date" id="dateTransaction">
+                        <input type="text" class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
 
-<form action="" class="form-horizontal row-border">
-    <div class="form-group">
-        <label for="" class="control-label col-sm-2">Name</label>
-        <div class="col-sm-8">
-            <input type="text" id="txtName" />
+                <div class="form-group">
+                    <div class="control-label col-sm-2">
+                        <input id="dateTransaction" type="submit" value="Save" class="form-control" />
+                    </div>
+                </div>
+            </form>
+        }
         </div>
     </div>
-    <div class="form-group">
-        <label for="ddlOffshore" class="control-label col-sm-2">Account</label>
-        <div class="col-sm-8">
-            <input id="ddlOffshore" value="34234">
-            @Html.DropDownListFor(m => m.funds, Model.funds)
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="txtAmount" class="control-label col-sm-2">Amount (ZAR)</label>
-        <div class="col-sm-8">
-            <input type="text" id="txtAmount" />
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="txtConvertedAmount" class="control-label col-sm-2" >Amount </label>
-        <div class="col-sm-8">
-            <input type="text" id="txtConvertedAmount" disabled="disabled" />
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="dateTransaction" class="control-label col-sm-2 ui-datepicker">Transaction Date</label>
-        <div class="col-sm-8">
-            <input id="dateTransaction" type="datetime">
-        </div>
-    </div>
-</form>
 
-<script>
-    $(function () {
-        $('.datepicker').datepicker({
-            format: 'mm-dd-yyyy'
+@section scripts {
+    <script type="text/javascript">
+        $(function () {
+            $('#dateTransaction').datetimepicker();
         });
-    });
-</script>
+    </script>
+}
+    
+

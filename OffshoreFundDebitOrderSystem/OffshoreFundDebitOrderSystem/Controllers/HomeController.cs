@@ -70,8 +70,8 @@ namespace OffshoreFundDebitOrderSystem.Controllers
 
                 try
                 {
-                    //client.DownloadString(Configurations.ExchangeUrl);
-                    string jsonExchangeRates = "[{'Name':'ZAR/AUD','Price':9.73},{'Name':'ZAR/BRL','Price':3.48},{'Name':'ZAR/CAD','Price':10.36},{'Name':'ZAR/CHF','Price':14.08},{'Name':'ZAR/DKK','Price':1.81},{'Name':'ZAR/EUR','Price':15.34},{'Name':'ZAR/GBP','Price':20.84},{'Name':'ZAR/HKD','Price':1.78},{'Name':'ZAR/KES','Price':0.13},{'Name':'ZAR/NOK','Price':1.62},{'Name':'ZAR/SEK','Price':1.64},{'Name':'ZAR/SGD','Price':9.65},{'Name':'ZAR/USD','Price':13.76}]";
+                    //for offline "[{'Name':'ZAR/AUD','Price':9.73},{'Name':'ZAR/BRL','Price':3.48},{'Name':'ZAR/CAD','Price':10.36},{'Name':'ZAR/CHF','Price':14.08},{'Name':'ZAR/DKK','Price':1.81},{'Name':'ZAR/EUR','Price':15.34},{'Name':'ZAR/GBP','Price':20.84},{'Name':'ZAR/HKD','Price':1.78},{'Name':'ZAR/KES','Price':0.13},{'Name':'ZAR/NOK','Price':1.62},{'Name':'ZAR/SEK','Price':1.64},{'Name':'ZAR/SGD','Price':9.65},{'Name':'ZAR/USD','Price':13.76}]";
+                    string jsonExchangeRates = client.DownloadString(Configurations.ExchangeUrl); 
 
                     currenciesVM = JsonConvert.DeserializeObject<IEnumerable<Currency>>(jsonExchangeRates);
                 }
