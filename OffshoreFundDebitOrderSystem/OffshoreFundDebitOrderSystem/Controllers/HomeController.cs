@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Net;
 using Newtonsoft.Json;
+using System.Web;
 using OffshoreFundDebitOrderSystem.Infrastructure;
 using OffshoreFundDebitOrderSystem.Models;
 using OffshoreFundDebitOrderSystem.Models.Infrastructure;
@@ -16,7 +17,7 @@ namespace OffshoreFundDebitOrderSystem.Controllers
     {
         ReturnStatus statusVM = null;
 
-        [System.Web.Http.HttpGet]
+        [HttpGet]
         public ActionResult Index()
         {
             IEnumerable<SelectListItem> accountsVM = null;
@@ -58,7 +59,7 @@ namespace OffshoreFundDebitOrderSystem.Controllers
             );
         }
 
-        [System.Web.Http.HttpPost]
+        [HttpPost]
         public ActionResult Index(HomeViewModel model)
         {
             IEnumerable<Currency> currenciesVM = null;
