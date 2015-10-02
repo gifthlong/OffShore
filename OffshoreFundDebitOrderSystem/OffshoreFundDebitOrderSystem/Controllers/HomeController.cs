@@ -60,7 +60,7 @@ namespace OffshoreFundDebitOrderSystem.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(HomeViewModel model)
+        public ActionResult Index(HomeViewModel model, FormCollection form)
         {
             IEnumerable<Currency> currenciesVM = null;
 

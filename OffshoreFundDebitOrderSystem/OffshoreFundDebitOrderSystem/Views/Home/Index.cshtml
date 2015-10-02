@@ -11,38 +11,37 @@
         {
             <form action="" class="form-horizontal row-border">
                 <div class="form-group">
-                    <label for="" class="control-label col-sm-2">Name</label>
+                    <label for="" class="control-label col-sm-2 col-sm-offset-2">Name</label>
                     <div class="col-sm-8">
-                        <input type="text" id="txtName" class="form-control" />
+                        <input type="text" id="txtName" name="txtName" class="form-control" required/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="ddlOffshore" class="control-label col-sm-2">Account</label>
+                    <label for="ddlOffshore" class="control-label col-sm-2 col-sm-offset-2">Account</label>
                     <div class="col-sm-8">
-                        <input id="ddlOffshore" value="34234">
-                        @Html.DropDownListFor(m => m.funds, Model.funds)
+                        @Html.DropDownListFor(m => m.funds, Model.funds, new { @class = "form-control", id = "ddlOffshore", name = "txtName", required = "required" })
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="txtAmount" class="control-label col-sm-2">Amount (ZAR)</label>
-                    <div class="col-sm-8">
-                        <input type="text" id="txtAmount" class="form-control" />
+                    <div class="form-horizontal">
+                        <label for="txtAmount" class="control-label col-sm-2 col-sm-offset-2">Amount (ZAR)</label>
+                        <div class="col-sm-2">
+                            <input type="number" id="txtAmount" name="txtAmount" class="form-control" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtConvertedAmount" class="control-label col-sm-2">Amount</label>
+                            <div class="col-sm-2">
+                                <input type="text" name="txtConvertedAmount" id="txtConvertedAmount" disabled="disabled" class="form-control" />
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="form-group">
-                    <label for="txtConvertedAmount" class="control-label col-sm-2">Amount </label>
-                    <div class="col-sm-8">
-                        <input type="text" id="txtConvertedAmount" disabled="disabled" class="form-control" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="control-label col-sm-2">
-                        <input id="dateTransaction" type="submit" value="Save" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group date" id="dateTransaction">
-                        <input type="text" class="form-control" />
+                    <label for="dateTransaction" class="control-label col-sm-2 col-sm-offset-2">Transaction Date</label>
+                    <div class="input-group date col-sm-8" id="dateTransaction">
+                        <input name="dateTransaction" type="text" id="dateTransaction" class="form-control" required />
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
@@ -50,8 +49,9 @@
                 </div>
 
                 <div class="form-group">
-                    <div class="control-label col-sm-2">
+                    <div class="control-label col-sm-2 col-sm-offset-2">
                         <input id="dateTransaction" type="submit" value="Save" class="form-control" />
+                        <input id="dateTransaction" type="submit" value="Save" class="form-control">
                     </div>
                 </div>
             </form>
