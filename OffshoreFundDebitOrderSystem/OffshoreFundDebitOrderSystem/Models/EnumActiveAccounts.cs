@@ -8,7 +8,7 @@ namespace OffshoreFundDebitOrderSystem.Models
 {
     public enum EnumActiveAccounts
     {
-        GBP,
+        GBP = 1,
         USD,
         EUR,
         ZAR
