@@ -30,7 +30,7 @@
                             @Html.TextBoxFor(m => m.currencies.ZARAmount, new { required = "required", @class = "form-control", id = "txtAmount" })
                         </div>
                         <div class="col-sm-2">
-                            <input type="submit" id="checkCurrency" class="form-control" value="Save">
+                            <input type="submit" id="checkCurrency" class="btn-default form-control" value="Covert Amount">
                         </div>
                             <div class="form-group">
                                 <label for="txtConvertedAmount" class="control-label col-sm-2">Amount</label>
@@ -44,17 +44,15 @@
                 <div class="form-group">
                     <label for="dateTransaction" class="control-label col-sm-2 col-sm-offset-2">Transaction Date</label>
                     <div class="input-group date col-sm-8" id="dateTransaction">
-                        <span class="input-group-addon">
+                       
                             @Html.EditorFor(m => m.currencies.submitDate, new { @class = "form-control datecontrol", require = "required" });
 
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="control-label col-sm-2 col-sm-offset-2">
-                        <input type="submit" id="writeToFile" class="form-control" value="Save">
+                        <input type="submit" id="writeToFile" class="form-control btn-primary" value="Save">
                     </div>
                 </div>
                 }
@@ -77,9 +75,9 @@
             form.submit();
         });
 
-        //$(function () {
-        //    $('.datepicker').datetimepicker();
-        //});
+        $(function () {
+           $('.datepicker').datetimepicker();
+        });
 
     </script>
 }
