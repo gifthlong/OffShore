@@ -5,12 +5,8 @@ using System.Web;
 using System.IO;
 using System.Configuration;
 using OffshoreFundDebitOrderSystem.Controllers;
-using System.Web;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+
 using System.Web.Mvc;
 using System.Net;
 using Newtonsoft.Json;
@@ -35,9 +31,9 @@ namespace OffshoreFundDebitOrderSystem.Models
                           order.submitDate.ToString("D") + "\n";
 
 
-            using (StreamWriter file = new StreamWriter()
+            using (StreamWriter file = new StreamWriter(ConfigurationManager.AppSettings["TextFilePath"].ToString(),true))
             {
-                
+                file.WriteLine(line);
             }
 
                 
