@@ -9,9 +9,8 @@
 <h2>Index</h2>
 <div class="container">
     <div class="row">
-        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-        {
-            <form action="" class="form-horizontal row-border">
+       
+            <form action="" id="mainForm" class="form-horizontal row-border">
                 <div class="form-group">
                     <label for="" class="control-label col-sm-2 col-sm-offset-2">Name</label>
                     <div class="col-sm-8">
@@ -30,42 +29,58 @@
                         <div class="col-sm-2">
                             @Html.TextBoxFor(m => m.currencies.ZARAmount, new { required = "required", @class = "form-control", id = "txtAmount" })
                         </div>
-
-                        <div class="form-group">
-                            <label for="txtConvertedAmount" class="control-label col-sm-2">Amount</label>
-                            <div class="col-sm-2">
-                                @Html.TextBoxFor(m => m.currencies.ConvertedAmount, new { required = "required", @class = "form-control", id = "txtConvertedAmount", disabled = "disabled" })
-                             </div>
+                        <div class="col-sm-2">
+                            <input type="submit" id="checkCurrency" class="form-control" value="Save">
                         </div>
-                    </div>
+                            <div class="form-group">
+                                <label for="txtConvertedAmount" class="control-label col-sm-2">Amount</label>
+                                <div class="col-sm-2">
+                                    @Html.TextBoxFor(m => m.currencies.ConvertedAmount, new { required = "required", @class = "form-control", id = "txtConvertedAmount", disabled = "disabled" })
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 
                 <div class="form-group">
                     <label for="dateTransaction" class="control-label col-sm-2 col-sm-offset-2">Transaction Date</label>
                     <div class="input-group date col-sm-8" id="dateTransaction">
-                        <input name="dateTransaction" type="text" id="dateTransaction" class="form-control" value="@Model.currencies.OrderDate" required />
                         <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
+                            @Html.EditorFor(m => m.currencies.submitDate, new { @class = "form-control datecontrol", require = "required" });
+
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="control-label col-sm-2 col-sm-offset-2">
-                        <input id="dateTransaction" type="submit" value="Save" class="form-control" />
-                        <input id="dateTransaction" type="submit" value="Save" class="form-control">
+                        <input type="submit" id="writeToFile" class="form-control" value="Save">
                     </div>
                 </div>
             </form>
-        }
+       
         </div>
     </div>
 
 @section scripts {
     <script type="text/javascript">
-        $(function () {
-            $('#dateTransaction').datetimepicker();
+        
+        $("#checkCurrency").click(function () {
+            var form = $("form#mainForm");
+            form.attr("action", "@Url.Action("Index", "Home")");
+            form.submit();
         });
+
+        $("#writeToFile").click(function () {
+            var form = $("form#mainForm");
+            form.attr("action", "@Url.Action("Save", "Home")");
+            form.submit();
+        });
+
+        //$(function () {
+        //    $('.datepicker').datetimepicker();
+        //});
+
     </script>
 }
     
