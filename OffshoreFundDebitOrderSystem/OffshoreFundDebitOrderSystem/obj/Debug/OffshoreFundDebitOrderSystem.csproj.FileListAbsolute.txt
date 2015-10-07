@@ -50,3 +50,6 @@ C:\Users\dvt\Documents\Projects\Test1\OffshoreFundDebitOrderSystem\OffshoreFundD
 C:\Users\dvt\Documents\Projects\Test1\OffshoreFundDebitOrderSystem\OffshoreFundDebitOrderSystem\obj\Debug\OffshoreFundDebitOrderSystem.csprojResolveAssemblyReference.cache
 C:\Users\dvt\Documents\Projects\Test1\OffshoreFundDebitOrderSystem\OffshoreFundDebitOrderSystem\obj\Debug\OffshoreFundDebitOrderSystem.dll
 C:\Users\dvt\Documents\Projects\Test1\OffshoreFundDebitOrderSystem\OffshoreFundDebitOrderSystem\obj\Debug\OffshoreFundDebitOrderSystem.pdb
+D:\Desktop\PSG\Test1\OffshoreFundDebitOrderSystem\OffshoreFundDebitOrderSystem\obj\Debug\OffshoreFundDebitOrderSystem.csprojResolveAssemblyReference.cache
+D:\Desktop\PSG\Test1\OffshoreFundDebitOrderSystem\OffshoreFundDebitOrderSystem\obj\Debug\OffshoreFundDebitOrderSystem.dll
+D:\Desktop\PSG\Test1\OffshoreFundDebitOrderSystem\OffshoreFundDebitOrderSystem\obj\Debug\OffshoreFundDebitOrderSystem.pdb

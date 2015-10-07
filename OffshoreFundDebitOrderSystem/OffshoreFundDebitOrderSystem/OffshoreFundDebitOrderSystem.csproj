@@ -134,6 +134,7 @@
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\EnumActiveAccounts.cs" />
     <Compile Include="Models\ExchangeRate.cs" />
+    <Compile Include="Models\ExportToTextFile.cs" />
     <Compile Include="Models\Infrastructure\ReturnStatus.cs" />
     <Compile Include="Models\OffshoreFund.cs" />
     <Compile Include="Models\ViewModels\HomeViewModel.cs" />

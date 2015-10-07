@@ -16,6 +16,7 @@ namespace OffshoreFundDebitOrderSystem.Models
         public EnumActiveAccounts SelectedCurrency { get; set; }
         public DateTime OrderDate { get; set; }
         public decimal ZARAmount { get; set; }
+        public DateTime submitDate { get; set; }
 
         public decimal ConvertedAmount
         {
