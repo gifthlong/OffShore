@@ -10,7 +10,7 @@ namespace OffshoreFundDebitOrderSystem.Models.ViewModels
 {
     public class HomeViewModel
     {
-        public List<Currency> currencies { get; set; }
+        public Currency currencies { get; set; }
         public IEnumerable<SelectListItem> funds { get; set; }
         public ReturnStatus status { get; set; }
     }
