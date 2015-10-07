@@ -1,10 +1,14 @@
-﻿@model OffshoreFundDebitOrderSystem.Models.ViewModels.HomeViewModel
+﻿
+
+@model OffshoreFundDebitOrderSystem.Models.ViewModels.HomeViewModel
 
 @{
     ViewBag.Title = "Index";
 }
 
 @Html.LabelFor(n => n.status.sMessage);
+
+
 
 <h2>Index</h2>
 <div class="container">
@@ -44,6 +48,8 @@
                     <label for="dateTransaction" class="control-label col-sm-2 col-sm-offset-2">Transaction Date</label>
                     <div class="input-group date col-sm-8" id="dateTransaction">
                         <input name="dateTransaction" type="text" id="dateTransaction" class="form-control" value="@Model.currencies.OrderDate" required />
+                     
+
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
@@ -61,12 +67,18 @@
         </div>
     </div>
 
+
+
+
 @section scripts {
     <script type="text/javascript">
         $(function () {
             $('#dateTransaction').datetimepicker();
         });
     </script>
+
+  
+
 }
     
 

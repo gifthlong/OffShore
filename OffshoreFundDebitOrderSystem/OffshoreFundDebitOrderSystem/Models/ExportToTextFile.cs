@@ -7,15 +7,6 @@ using System.Configuration;
 using OffshoreFundDebitOrderSystem.Controllers;
 
 
-//using System.Web.Mvc;
-//using System.Net;
-//using Newtonsoft.Json;
-
-//using OffshoreFundDebitOrderSystem.Infrastructure;
-//using OffshoreFundDebitOrderSystem.Models;
-//using OffshoreFundDebitOrderSystem.Models.Infrastructure;
-//using OffshoreFundDebitOrderSystem.Models.ViewModels;
-
 namespace OffshoreFundDebitOrderSystem.Models
 {
     public class ExportToTextFile
