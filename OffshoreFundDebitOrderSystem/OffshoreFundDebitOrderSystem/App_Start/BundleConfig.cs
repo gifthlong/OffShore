@@ -10,7 +10,9 @@ namespace OffshoreFundDebitOrderSystem
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/bootstrap.min.js"));
+                        "~/Scripts/bootstrap.min.js",
+                        "~/Scripts/bootstrap-datetimepicker.min.js"
+                        ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
                         "~/Scripts/jquery-ui-{version}.js"));
@@ -26,7 +28,8 @@ namespace OffshoreFundDebitOrderSystem
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/site.css",
-                "~/Content/bootstrap.css"
+                "~/Content/bootstrap.css",
+                "~/Content/themes/base/minified/jquery.ui.datepicker.min"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
