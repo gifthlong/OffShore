@@ -9,8 +9,8 @@
 <h2>Index</h2>
 <div class="container">
     <div class="row">
-       
-            <form action="" id="mainForm" class="form-horizontal row-border">
+       @using (Html.BeginForm("Index", "Home", FormMethod.Post, new {id="mainForm", @class="form-horizontal row-border"}))
+        {   
                 <div class="form-group">
                     <label for="" class="control-label col-sm-2 col-sm-offset-2">Name</label>
                     <div class="col-sm-8">
@@ -57,7 +57,7 @@
                         <input type="submit" id="writeToFile" class="form-control" value="Save">
                     </div>
                 </div>
-            </form>
+                }
        
         </div>
     </div>

@@ -106,13 +106,13 @@ namespace OffshoreFundDebitOrderSystem.Controllers
                 }
             }
 
-            return View(model);
+            return View("Index", model);
         }
 
         [HttpPost]
         public ActionResult Save(HomeViewModel model)
         {
-            return View(model);
+            return View("Index", model);
         }
     }
 }
